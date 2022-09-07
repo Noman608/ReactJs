@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import PropTypes from 'prop-types'; 
 class Student extends Component {
   render() {
     return (
@@ -9,5 +9,12 @@ class Student extends Component {
       </>
     );
   }
+}
+Student.propTypes = {
+     name:PropTypes.string.isRequired, 
+     roll:PropTypes.number,
+}
+Student.defaultProps = {
+    name:"NoShow",
 }
 export default Student;
