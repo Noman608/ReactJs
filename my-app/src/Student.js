@@ -1,8 +1,8 @@
 import React from "react";
-const Student = () => {
+const Student = (props) => {
     return(
         <>
-            <h1>Hello Noman</h1>
+            <h1>Hello {props.name}</h1>
         </>
     )
 };

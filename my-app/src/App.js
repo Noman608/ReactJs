@@ -4,7 +4,9 @@ import Student from "./Student.js";
 const App = () => {
   return (
     <div>
-      <Student />
+      <Student name="Abdullah"/>
+      <Student name="Al"/>
+      <Student name="Noman"/>
     </div>
   );
 };
