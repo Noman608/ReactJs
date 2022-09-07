@@ -6,9 +6,13 @@ import React from "react";
 
 class App extends Component {
   render() {
-    // return React.createElement("h1", null, "Hello From the App Component!!");
+    
     return(
-        <h1>Hello ...</h1>
+      //React.createElement("h1", null, "Hello From the App Component!!");   /**javscript**/
+      <React.Fragment>
+        <h1>Hello</h1>
+        <h2>Noman</h2>
+      </React.Fragment>
     )
   }
 }

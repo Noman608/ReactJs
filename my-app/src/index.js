@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+//import App from "./App";
+import Student from "./Student.js";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Student name="Abdullah"/>, document.getElementById("root"));
