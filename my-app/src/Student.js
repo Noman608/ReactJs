@@ -1,19 +1,11 @@
 import React, { Component } from "react";
-
-
-/** Functional component**/
-// const Student = (props)=>{
-//   return (
-//     <h1>Hello Noman , {props.children}</h1>
-//   )
-// }
-
-/** Class component**/
-class Student extends Component{
-  render(){
-    return(
-      <h1>Hello Noman , {this.props.children}</h1>
-    )
+class Student extends Component {
+  state = {
+    name: "Noman",
+    roll: this.props.roll,
+  };
+  render() {
+    return <h1>Hello {this.state.name} Your Roll number : {this.state.roll}</h1>;
   }
 }
 
