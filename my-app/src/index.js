@@ -1,7 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import Student from "./Student.js"
+import ReacDOM from "react-dom/client";
+import Student from "./Student.js";
+const root = ReacDOM.createRoot(document.getElementById("root"));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(<Student  roll={1234}/>);
+root.render(<Student>I am Child</Student>);
