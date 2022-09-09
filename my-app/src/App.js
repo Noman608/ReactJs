@@ -19,7 +19,7 @@ export default class App extends Component {
     //AJAX call 
     //API call
     console.log("App - componentDidMount Called!");
-  }
+  } 
   render() {
     console.log("App - rendere App Called!");
     return (
