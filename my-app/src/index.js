@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Student from "./Student.js";
+import App from "./App.js";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Student roll="118cs0608"/>)
+root.render(<App name="I am App Props"/>)
