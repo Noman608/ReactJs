@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Student from "./Student";
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from "./App";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Student name="I am App Props"/>)
+root.render(
+  <>
+    <App />
+  </>
+);
