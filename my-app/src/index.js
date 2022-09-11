@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const arr = [10, 20, 30, 40];
 root.render(
   <>
-    <App/>
+    <App numbers={arr}/>
   </>
 );

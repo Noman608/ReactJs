@@ -1,33 +1,18 @@
-import React, { Component } from "react";
-import User from "./User.js";
-import Guest from "./Guest.js";
+import React, { Component } from 'react'
+import User from './User';
+
 export default class App extends Component {
-  state = {
-    isLoggedIn: false,
-  };
-  clickLogin = ()=>{
-    this.setState({isLoggedIn:true})
-  }
-  clickLogOut = ()=>{
-    this.setState({isLoggedIn:false})
-  }
   render() {
-    const isLoggedIn = this.state.isLoggedIn;
-    // let consumer;
-    // if (isLoggedIn) {
-    //   consumer =  <User clickData={this.clickLogOut}/>;
-    // } else {
-    //   consumer = <Guest clickData={this.clickLogin}/>;
-    // }
-    // return (
-    //   <>
-    //     {consumer}
-    //   </>
-    // )
-    return(
-      <>
-        {isLoggedIn? <User clickData={this.clickLogOut}/>:<Guest clickData={this.clickLogin}/>}
-      </>
+    const arr =  this.props.numbers;
+    const newArr = arr.map((num)=>{
+      return (
+        <User value={num} key={num}/>
+      );
+    });
+    return (
+      <div>
+        <ul>{newArr}</ul>
+      </div>
     )
   }
 }
