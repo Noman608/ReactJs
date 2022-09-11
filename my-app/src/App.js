@@ -1,11 +1,14 @@
-import React from 'react'
-import useCustomCounter from './Custom.js'
-export default function App() {
-    const data = useCustomCounter();
-  return (
-    <React.Fragment>
-      <h1>Count Up : {data.count}</h1>
-       <button type='button' onClick={data.handelIncrement}>Increment</button>
-    </React.Fragment>
-  )
+import React, { Component } from 'react'
+import User from './User';
+
+export default class App extends Component {
+  render() {
+    const primeMember = this.props.primeMember;
+    return (
+      <React.Fragment>
+        <h1>Welcome User</h1>
+        {primeMember && <User/>}
+      </React.Fragment>
+    )
+  }
 }
