@@ -3,9 +3,10 @@ import React, { Component } from 'react'
 export default class User extends Component {
   render() {
     return (
-      <div>
-        <h3>Prime Member</h3>
-      </div>
+      <React.Fragment>
+        <h1>Welcome Noman</h1>
+        <button onClick={this.props.clickData}>Logout</button>
+      </React.Fragment>
     )
   }
 }
