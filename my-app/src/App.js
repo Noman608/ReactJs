@@ -1,27 +1,25 @@
-import React, { Component } from 'react'
-
+import React, { Component } from "react";
 export default class App extends Component {
-  state = {
-    name:"XXX",
-    password:1234,
+  constructor(props) {
+    super(props);
+    this.state = {
+      value:"",
+    }
+    this.textInput = React.createRef();
   }
-  handleChnage = (e)=>{
-       this.setState({[e.target.name]:e.target.value})
+  handleSubmit =(e)=>{
+    e.preventDefault();
+    this.setState({value:this.textInput.current.value});
   }
   render() {
     return (
-      <>
-        <form>
-        <br />
-          <label>
-            Name: <input type="text" name='name' value={this.state.name}  onChange={this.handleChnage} />
-          </label>
-          <br /> <br />
-          <label>
-            Password: <input type="text" name='password' value={this.state.password} onChange={this.handleChnage}/>
-          </label>
+      <React.Fragment>
+        <h2>You Type : {this.state.value}</h2>
+        <form onSubmit={this.handleSubmit}>
+          Input: <input type="text" ref={this.textInput}/>
+          <input type="submit" value="Submit" />
         </form>
-      </>
-    )
+      </React.Fragment>
+    );
   }
 }
