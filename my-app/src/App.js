@@ -5,11 +5,8 @@ export default class App extends Component {
     name:"XXX",
     password:1234,
   }
-  handleChnagename = (e)=>{
-    this.setState({name:e.target.value})
-  }
-  handleChnagePass = (e)=>{
-    this.setState({password:e.target.value})
+  handleChnage = (e)=>{
+       this.setState({[e.target.name]:e.target.value})
   }
   render() {
     return (
@@ -17,11 +14,11 @@ export default class App extends Component {
         <form>
         <br />
           <label>
-            Name: <input type="text" value={this.state.name}  onChange={this.handleChnagename} />
+            Name: <input type="text" name='name' value={this.state.name}  onChange={this.handleChnage} />
           </label>
           <br /> <br />
           <label>
-            Password: <input type="text" value={this.state.password} onChange={this.handleChnagePass}/>
+            Password: <input type="text" name='password' value={this.state.password} onChange={this.handleChnage}/>
           </label>
         </form>
       </>
