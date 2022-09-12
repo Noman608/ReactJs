@@ -1,18 +1,48 @@
-import React, { Component } from 'react'
-import User from './User';
+import React, { Component } from "react";
 
 export default class App extends Component {
+  state = {
+    change: false,
+  };
+  clickHandel = ()=>{
+    this.setState({change:true});
+  }
   render() {
-    const arr =  this.props.numbers;
-    const newArr = arr.map((num)=>{
-      return (
-        <User value={num} key={num}/>
-      );
-    });
+    const btnstyle = {
+      color: "blue",
+      backgroundColor: "orange",
+    };
+    
+    if(this.state.change){
+       btnstyle.backgroundColor = "White";
+    }
     return (
-      <div>
-        <ul>{newArr}</ul>
-      </div>
-    )
+      <>
+        <button style={btnstyle} onClick={this.clickHandel} >Change</button>
+      </>
+    );
+
+    
+    // const txtc = {
+    //   color: "blue",
+    // };
+    // const txts = {
+    //   fontSize: "80px",
+    // };
+    // return (
+    //   <div>
+    //     <h1 style={{...txtc,...txts,...{fontFamily:"fantasy"}}}>Hello</h1>
+    //   </div>
+    // );
+
+    // const btnstyle = {
+    //   color:"blue",
+    //   backgroundColor:"orange",
+    // }
+    // return (
+    //   <div>
+    //     <button style={btnstyle}>Button</button>
+    //   </div>
+    // )
   }
 }
