@@ -1,24 +1,30 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 export default class App extends Component {
   state = {
-    value: "",
-  };
-  handleChange = (e) => {
-    this.setState({value:e.target.value.toUpperCase().substr(0,10)});
-  };
+    name:"XXX",
+    password:1234,
+  }
+  handleChnagename = (e)=>{
+    this.setState({name:e.target.value})
+  }
+  handleChnagePass = (e)=>{
+    this.setState({password:e.target.value})
+  }
   render() {
     return (
       <>
         <form>
-          <h2>Controlled by React</h2>
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange}
-          />
+        <br />
+          <label>
+            Name: <input type="text" value={this.state.name}  onChange={this.handleChnagename} />
+          </label>
+          <br /> <br />
+          <label>
+            Password: <input type="text" value={this.state.password} onChange={this.handleChnagePass}/>
+          </label>
         </form>
       </>
-    );
+    )
   }
 }
