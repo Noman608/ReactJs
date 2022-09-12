@@ -1,48 +1,14 @@
-import React, { Component } from "react";
-
+import React, { Component } from 'react'
+import "./App.css"
+import User from './User'
 export default class App extends Component {
-  state = {
-    change: false,
-  };
-  clickHandel = ()=>{
-    this.setState({change:true});
-  }
   render() {
-    const btnstyle = {
-      color: "blue",
-      backgroundColor: "orange",
-    };
-    
-    if(this.state.change){
-       btnstyle.backgroundColor = "White";
-    }
+    let style = false;
     return (
-      <>
-        <button style={btnstyle} onClick={this.clickHandel} >Change</button>
-      </>
-    );
-
-    
-    // const txtc = {
-    //   color: "blue",
-    // };
-    // const txts = {
-    //   fontSize: "80px",
-    // };
-    // return (
-    //   <div>
-    //     <h1 style={{...txtc,...txts,...{fontFamily:"fantasy"}}}>Hello</h1>
-    //   </div>
-    // );
-
-    // const btnstyle = {
-    //   color:"blue",
-    //   backgroundColor:"orange",
-    // }
-    // return (
-    //   <div>
-    //     <button style={btnstyle}>Button</button>
-    //   </div>
-    // )
+      <div>
+        <h1 className='txtb textS'>Hello App</h1>
+        <User color={style?"txtb":"txtg"}/>
+      </div>
+    )
   }
 }

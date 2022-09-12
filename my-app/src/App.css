@@ -1,3 +1,9 @@
-.bg{
-    background-color: brown;
+.txtb{
+    color: blue;
+}
+.textS{
+    font-style: italic;
+}
+.txtg{
+    color: green;
 }
