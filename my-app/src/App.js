@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import styles from "./App.module.css";
-import User from './User'
+import pic from "./disha.jpg"
 export default class App extends Component {
   render() {
-    let style = false;
     return (
       <div>
-        <h1 className={`${styles.textS} ${styles.txtg}`}>Hello App</h1>
-        <User color={style?"txtb":"txtg"}/>
+        {/* <img src={process.env.PUBLIC_URL+"/img/disha.jpg"} alt="Mypic" /> */}
+        <img src={pic} alt="Mypic"/>
       </div>
     )
   }
