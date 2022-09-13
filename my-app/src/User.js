@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-
+import Guest from './Guest'
 export default class User extends Component {
-
   render() {
     return (
       <div>
-        <h2>User: {this.props.num + 10}</h2>
+        <h3>User Component</h3>
+        <Guest/>
       </div>
     )
   }
