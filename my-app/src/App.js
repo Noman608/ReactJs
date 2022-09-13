@@ -1,29 +1,18 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
+import Guest from './Guest'
+import User from './User'
 
 export default class App extends Component {
-  constructor() {
-    super();
-    this.backRef = null;
-    this.setBackRef = (element) => {
-      this.backRef = element;
-    };
-  }
-  componentDidMount = ()=>{
-    if(this.backRef){
-      this.backRef.focus();
-    }
+  state = {
+    name:"Hello Noman",
+    value:10,
   }
   render() {
     return (
-      <>
-        <form>
-          Name : <input type="text" />
-          <br />
-          Password : <input type="text" ref={this.setBackRef}/>
-          <br />
-          Address : <input type="text" />
-        </form>
-      </>
-    );
+      <div>
+        <User num={this.state.value} />
+        <Guest number={this.state.value}/>
+      </div>
+    )
   }
 }
