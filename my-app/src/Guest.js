@@ -5,12 +5,13 @@ import { MyContext } from "./Context";
 export default class Guest extends Component {
   static contextType = MyContext;
   render() {
+    const {name,value} = this.context.data;
     return (
       <div>
         <h3>Guest Component</h3>
 
         <h4>
-                Name: {this.context.data.name} Value: {this.context.data.value}
+                Name: {name} Value: {value}
               </h4>
               <button onClick={this.context.handleClick}>Change Value</button>
 
