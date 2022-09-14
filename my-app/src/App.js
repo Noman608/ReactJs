@@ -3,24 +3,21 @@ import User from "./User";
 import { Provider } from "./Context";
 export default class App extends Component {
   state = {
-    name: "Noman",
-    value: 10,
+    name: "Rahul",
+    value: 10
   };
-   handleClickNext = () => {
+  handleClickContext = () => {
     this.setState({ value: this.state.value + 1 });
   };
   render() {
     const contextValue = {
       data: this.state,
-      handleClick: this.handleClickNext,
+      handleClick: this.handleClickContext
     };
     return (
-      <div>
-        <h3>App Component</h3>
-        <Provider value={contextValue}>
-          <User />
-        </Provider>
-      </div>
+      <Provider value={contextValue}>
+        <User />
+      </Provider>
     );
   }
 }
